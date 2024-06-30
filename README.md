@@ -127,29 +127,35 @@ Once the compiler does not return any errors, you can deploy the contract by cli
 
 ### Sample Demonstration of the Digital Identity
 
-Once the deployment is successful, you can proceed for a sample demonstration.
+Once the deployment is successful, you can proceed for a sample demonstration. First, you need to create an identity of your respective ethereum address.
 
 #### Function `createIdentity`
 
+With this function, you can insert values such as name and age. Each of the input has a conditional statement. The `name` will not accept empty string while `age` will not accept less than 0 value. Upon proceeding with this transaction, it will ensure name and age are valid.
+
 #### Function `getIdentity`
+
+Next, by calling this function it will return value types of `name`, `age`, and `id`. The previous variable that has appeared which is `id` increments every a new identity has been created.
 
 #### Function `updateIdentity`
 
+Next, by utilizing this function it will now update the value types of your identity based on the parameter that you have set. More so, it will overwrite your current identity value with updated ones. Also, each of the input value have a `require` statement same with the previously mentioned in `createIdentity`.
+
 #### Function `validateIdentity`
+
+Next, you need to put your ethereum address so that the function will return a statement determining the existance of the identity within that address. It is a boolean function so it will return either `true` or `false` with `assert` statement.
 
 #### Function `deleteIdentity`
 
+Next, upon processing this function, it will instantly delete the current identity of the current ethereum address that was mapped in the contract.
+
 #### Function `unsafeDeleteIdentity`
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+Lastly, this function serves the purpose of testing the `revert` statement. To test it, switch to another account. Then, in the input field for the address, enter the Ethereum `address` of the first account with which you created an identity previously.
 
 ## Help
 
-If it somehow happens that the functions for `validateIdentity` or `unsafeDeleteIdentity` returns an error stating that `address does not exist` , please review the Ethereum address and make it sure it is `valid`.
+If it somehow happens that the functions for `validateIdentity` or `unsafeDeleteIdentity` returns an error stating that `address does not exist`, please review the Ethereum address and make it sure it is `VALID`.
 
 ## Authors
 
